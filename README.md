@@ -13,7 +13,7 @@ I find it pretty useful when i quickly need to scrape some text from somewhere
 that i can't get anyway else.
 
 ### Usage
-Once you have it running you simple do:
+Once you have it running you simply do:
 ```
 <your-ipaddres:<yourport>/snapshot.jpeg <or url>
 ```
