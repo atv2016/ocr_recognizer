@@ -5,7 +5,7 @@ URL or filepath and returns the JSON output.
 
 ### How is this different from Frigate OCR Recognizer
 
-This is a simple web endpoint. [Frigate ocr recognizer](https://github.com/atv2016/frigate_ocr_recognizer) is a fork from [plate
+This is a simple web endpoint. [Frigate ocr recognizer](https://github.com/atv2016/frigate_ocr_recognizer) is a fork from [Frigate plate
 recognizer](https://github.com/ljmerza/frigate_plate_recognizer) and more tightly integrates with Frigate using MQTT to exchange
 messages and set sublabels in Frigate.
 
