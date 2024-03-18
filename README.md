@@ -41,12 +41,12 @@ sudo docker push <docker namespace/ocr_recognizer:v1.0.0-yourtag
 ### Running
 You can use docker run to run your own image you just build in the previous step:
 ```
-sudo docker run -e TZ=Europe/London -E IP=<your-ip> -p 7777:7777/tcp -it --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all --privileged -v ./:/config --rm ocr_recognizer:v1.0.0-yourtag (or latest)
+sudo docker run -e TZ=Europe/London -p 7777:7777/tcp -it --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all --privileged -v ./:/config --rm ocr_recognizer:v1.0.0-yourtag (or latest)
 ```
 Or run it from the docker registry by prefacing it with the namespace from docker (if you build your own image make sure to do that as well, e.g. ```-t <docker_namespace```, otherwise docker push might give you problems).
 
 ```bash
-sudo docker run -e TZ=Europe/London -e HOST=<your-ip> -e PORT=<your-port> -it --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all --privileged -v ./:/config --rm
+sudo docker run -e TZ=Europe/London -p 7777:7777/tcp -it --gpus all -e NVIDIA_DRIVER_CAPABILITIES=all --privileged -v ./:/config --rm
 ocr_recognizer atv2016/ocr_recognizer:v1.0.0-yourtag (or latest)
 ```
 or just use the docker-compose supplied:
