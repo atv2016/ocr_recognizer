@@ -72,8 +72,6 @@ services:
     environment:
       - TZ=Europe/London
       - NVIDIA_DRIVER_CAPABILITIES=all
-      - HOST=192.168.50.34
-      - PORT=7777
 ```
 Fill in the HOST and PORT variables specific to your host and execute:
 ```
