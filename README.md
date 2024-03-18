@@ -1,6 +1,6 @@
-# OCR Recognizer:  
+# OCR Recognizer 
 
-# EasyOCR service using Flask that serves as a web endpoint that ingests the
+EasyOCR service using Flask that serves as a web endpoint that ingests the
 URL or filepath and returns the JSON output.
 
 ### How is this different from frigate_ocr_recognizer
