@@ -3,14 +3,13 @@
 EasyOCR service using Flask that serves as a web endpoint that ingests the
 URL or filepath and returns the JSON output.
 
-### How is this different from frigate_ocr_recognizer
+### How is this different from Frigate OCR Recognizer
 
-This is a simple web endpoint. [Frigate ocr recognizer](https://github.com/atv2016/frigate_ocr_recognizer) is a fork from plate
-recognizer and more tightly integrates with Frigate using MQTT to exchange
+This is a simple web endpoint. [Frigate ocr recognizer](https://github.com/atv2016/frigate_ocr_recognizer) is a fork from [plate
+recognizer](https://github.com/ljmerza/frigate_plate_recognizer) and more tightly integrates with Frigate using MQTT to exchange
 messages and set sublabels in Frigate.
 
-I find it pretty useful when i quickly need to scrape some text from somewhere
-that i can't get anyway else.
+I find it pretty useful when i quickly need to scrape some text from somewhere that i can't get anyway else.
 
 ### Usage
 Once you have it running you simply do:
