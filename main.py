@@ -1,3 +1,7 @@
+# Ocr recognizer
+
+# EasyOCR service using Flask that serves as a web endpoint that ingests the URL or filepath and returns the JSON output.
+
 from flask import Flask
 from flask import jsonify
 import easyocr
@@ -38,4 +42,4 @@ def image(url):
     return jsonify(result)
 
 # Use environment variable here from docker compose
-app.run(os.getenv("HOST",os.getenv("PORT")
+app.run(host="0.0.0.0",port=7777)
