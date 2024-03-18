@@ -5,9 +5,9 @@ URL or filepath and returns the JSON output.
 
 ### How is this different from frigate_ocr_recognizer
 
-This is a simple web endpoint. Frigate ocr recognizer is a fork from plate
-recognizer and more tightly integrates with frigate using MQTT to exchange
-messages and set sublabels in frigate.
+This is a simple web endpoint. [Frigate ocr recognizer](https://github.com/atv2016/frigate_ocr_recognizer) is a fork from plate
+recognizer and more tightly integrates with Frigate using MQTT to exchange
+messages and set sublabels in Frigate.
 
 I find it pretty useful when i quickly need to scrape some text from somewhere
 that i can't get anyway else.
@@ -74,7 +74,7 @@ services:
       - HOST=192.168.50.34
       - PORT=7777
 ```
-And execute:
+Fill in the HOST and PORT variables specific to your host and execute:
 ```
 sudo docker-compose up -d
 ```
