@@ -73,7 +73,7 @@ services:
       - TZ=Europe/London
       - NVIDIA_DRIVER_CAPABILITIES=all
 ```
-Fill in the HOST and PORT variables specific to your host and execute:
+And execute:
 ```
 sudo docker-compose up -d
 ```
