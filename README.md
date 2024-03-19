@@ -87,8 +87,17 @@ Say you wanted to get the latest school menu which your children's school someti
 
 1. Run this docker container.
 2. Setup a scrape in HA to the url that your school publishes (in my case the image is always named differently) so i have to scrape the href attribute in the url. Go to your favorite web inspector, find the link you need, copy the select path, and set the attribute to href. This way you will <ins>always</ins> get the image file the href is linking to.
-3. Setup a rest command in HA in your configuration.yaml that you can use on demand and store the return data in a response variable.
-4. Setup the automation where you use the service of the rest command you just created, and then index the response_variable to get the data you want. Read out the days school menu on TTS for example and bask in the glory of another automation well done (which no doubt will break soon enough).
+3. Setup a rest command in HA in your configuration.yaml that you can use on demand and store the return data in a response variable. Restart Homeassistant and you should see the new service.
+
+Something like this should do:
+```
+rest_command:
+  get_school_menu:
+    url: "192.168.50.34:7777/{{ states('sensor.web_scrape_your_school_menu_link') }}"
+    method: GET
+    content_type:  'application/json; charset=utf-8'
+```
+5. Setup the automation where you use the service of the rest command you just created, and then index the response_variable to get the data you want. Read out the days school menu on TTS for example and bask in the glory of another automation well done (which no doubt will break soon enough).
 
 ### EasyOCR optimization
 
