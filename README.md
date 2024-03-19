@@ -79,6 +79,18 @@ sudo docker-compose up -d
 ```
 [Docker repository](https://hub.docker.com/r/atv2016/ocr_recognizer)
 
+### Automation
+
+Here's an automation that consists of 3 steps, using Homeassistant:
+
+Say you wanted to get the latest school menu which your children's school sometimes publishes but the links are not always consistent.
+
+1. Run this docker container.
+2. Setup a scrape in HA to the url that your school publishes (in my case the image is always named differently) so i have to scrape the href attribute in the url. Go to your favorite web inspector, find the link you need, copy the select path, and set the attribute to href. This way you will <ins>always</ins> get the image file the href is linking to.
+3. Setup a rest command in HA in your configuration.yaml that you can use on demand and store the return data in a response variable.
+4. Setup the automation where you use the service of the rest command you just created, and then index the response_variable to get the data you want.
+5. Read out the days school menu on TTS for example and bask in the glory of another automation well done (which no doubt will break soon enough).
+
 ### EasyOCR optimization
 
 You can give a variety of options to EasyOCR, and you can test them out by using the easy.py script that is included in the repo. Look on the [JadedAI](https://github.com/JaidedAI/EasyOCR) website for the full API reference. You can adjust batch size, scale, margin, canvas and a whole lot more. That said, i found the default to work the best for my needs in the end.
