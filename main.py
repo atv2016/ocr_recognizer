@@ -27,7 +27,18 @@ def image(url):
     global reader
 
     # Works with images, how to make it work with url
-    result = reader.readtext(url,canvas_size=1000,detail=0,paragraph=True)
+    if "CANVAS_SIZE" in os.environ:
+	    CANVAS_SIZE=int(os.environ["CANVAS_SIZE"])
+    else:
+        CANVAS_SIZE=""
+
+    if CANVAS_SIZE:
+	    print(f"Using custom canvas size of { CANVAS_SIZE }")
+	    result = reader.readtext(url,canvas_size=CANVAS_SIZE,detail=0,paragraph=True)
+    else:
+	    print("Using default canvas size of 2560")
+	    result = reader.readtext(url,detail=0,paragraph=True)
+
     #return jsonify(result)
 
     # Do gc and memory cleanup as Pytorch is memory intensive
