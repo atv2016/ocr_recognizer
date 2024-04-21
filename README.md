@@ -77,7 +77,8 @@ And execute:
 ```
 sudo docker-compose up -d
 ```
-Environment variables:
+<ins>Environment variables</ins>:
+
 CANVAS_SIZE: 1000
 IMAGE_SPLIT: 1
 
