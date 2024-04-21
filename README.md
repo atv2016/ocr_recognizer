@@ -90,7 +90,7 @@ CANVAS_SIZE works the same as with frigate_ocr_recognizer. IMAGE_SPLIT is specif
 
 Here's an automation that consists of 4 steps, using Homeassistant:
 
-Say you wanted to get the latest school menu which your children's school sometimes publishes but the links are not always consistent.
+Say you wanted to get the latest school menu which your children's school sometimes publishes but the links are not always consistent. If you have a consistent link you can skip step 2 and just setup the rest sensor with the static url to the image.
 
 1. Run this docker container.
 2. Setup a scrape in HA to the url that your school publishes (in my case the image is always named differently) so i have to scrape the href attribute in the url. Go to your favorite web inspector, find the link you need, copy the select path, and set the attribute to href. This way you will <ins>always</ins> get the image file the href is linking to.
