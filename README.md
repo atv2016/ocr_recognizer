@@ -77,6 +77,12 @@ And execute:
 ```
 sudo docker-compose up -d
 ```
+Environment variables:
+CANVAS_SIZE: 1000
+IMAGE_SPLIT: 1
+
+IMAGE_SPLIT is specific to ocr_recognizer and my use case but might help you for easier OCR recognition. It will split the image in equal parts left and right using ImageMagick.
+
 [Docker repository](https://hub.docker.com/r/atv2016/ocr_recognizer)
 
 ### Automation
